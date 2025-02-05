@@ -1,0 +1,10 @@
+.pagination {
+    span,
+    a {
+        @apply w-[41px] h-[41px] inline-flex items-center justify-center hover:text-primary;
+    }
+
+    span.current {
+        @apply border border-solid border-primary text-primary;
+    }
+}

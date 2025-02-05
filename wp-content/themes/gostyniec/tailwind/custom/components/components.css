@@ -1,0 +1,103 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `components` layer
+ *
+ * “Add more opinionated, complex classes like buttons, form controls, alerts,
+ * etc; the sort of pre-built components you often see in other frameworks that
+ * you might need to override with utility classes.”
+ *
+ * — from https://tailwindcss.com/docs/plugins#adding-components
+ */
+
+/**
+ * Post title styles
+ *
+ * These will be applied to all headings with a `page-title` or `entry-title`
+ * class on the frontend and to the post title in the block editor.
+ *
+ * The supplied styles are meant to match the default `h1` classes from
+ * Tailwind Typography.
+ */
+.page-title,
+.entry-title {
+	@apply mx-auto mb-6 text-3xl font-extrabold text-neutral-900;
+}
+
+/**
+ * Layout styles for centered content areas
+ *
+ * If you are controlling the width of your content area with styles applied
+ * to its container, you can delete the following styles whose selectors begin
+ * with `.page-content >` and `.entry-content >`. For more details, please see
+ * the following:
+ *
+ * https://make.wordpress.org/core/2021/06/29/on-layout-and-content-width-in-wordpress-5-8/
+ */
+.page-content > *,
+.entry-content > * {
+	/* Content width from the `theme.json` file */
+	@apply  mx-auto;
+}
+
+.entry-content > .alignwide {
+	@apply max-w-wide;
+}
+
+.entry-content > .alignfull {
+	@apply max-w-none;
+}
+
+.entry-content > .alignleft {
+	@apply float-left mr-8;
+}
+
+.entry-content > .alignright {
+	@apply float-right ml-8;
+}
+
+section {
+  scroll-margin: 120px;
+}
+
+.wysiwyg p,
+.wysiwyg li,
+.wysiwyg li a {
+  @apply text-base xl:text-[17px] lg:leading-[22px] mb-5 xl:mb-[34px] text-secondary;
+}
+
+.wysiwyg-small p {
+  @apply text-[15px] leading-[19px] mb-5 text-black;
+}
+
+.wysiwyg img {
+	@apply mr-[23px] xl:min-w-[47px] object-contain;
+}
+
+.wysiwyg .flex p + p {
+	@apply text-base xl:text-[33px] xl:leading-[44px];
+}
+
+.wysiwyg .flex p,
+.wysiwyg .flex:not(.buttons) a,
+.wysiwyg .flex {
+	@apply text-[17px] sm:text-[24px] 2xl:text-[33px];
+}
+
+.wysiwyg .flex {
+	@apply mb-[35px];
+}
+
+.wysiwyg a:not(.button) {
+	@apply text-secondary hover:text-primary hover:no-underline;
+}
+
+.wysiwyg strong {
+	@apply font-bold;
+}
+
+.copyright p {
+  @apply flex items-baseline flex-wrap justify-center;
+}
+
+.copyright a {
+  @apply ml-2 mt-2 sm:mt-0;
+}

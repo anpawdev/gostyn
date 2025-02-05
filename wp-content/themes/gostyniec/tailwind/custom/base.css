@@ -1,0 +1,179 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `base` layer
+ *
+ * “Add things like base typography styles [or] opinionated global resets.”
+ *
+ * — from https://tailwindcss.com/docs/plugins#adding-base-styles
+ */
+
+/**
+ * This uses the background and foreground colors declared in the
+ * `theme.json` file and is applied both to the frontend and in the block
+ * editor.
+*/
+body {
+	@apply font-Lato text-secondary font-light overflow-x-hidden;
+}
+
+#page {
+	@apply overflow-x-hidden;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.breadcrumb_last {
+	@apply text-primary;
+}
+
+article {
+	ul {
+		list-style: disc;
+		@apply mb-5 px-5;
+	}
+
+	h1 {
+		@apply text-3xl md:text-[36px] md:leading-[60px] lg:leading-[80px];
+	}
+
+	h2 {
+		@apply font-Lato mb-7 mt-3 text-3xl xl:text-3xl;
+	}
+
+	h3 {
+		@apply font-Lato text-black my-5 text-xl sm:text-2xl normal-case;
+	}
+
+	h4 {
+		@apply font-Lato text-black text-xl;
+	}
+
+	h5 {
+		@apply font-Lato text-black text-xs sm:text-base;
+	}
+
+	h6 {
+		@apply font-Lato text-black text-xs;
+	}
+
+	p,
+	ul {
+		@apply mb-5;
+	}
+
+	p,
+	ul li,
+	ul li a {
+		@apply font-Lato text-base lg:leading-6 text-black;
+	}
+
+	li::marker {
+		@apply bg-primary text-primary;
+	}
+
+	p {
+		img {
+			@apply mb-10 w-full;
+		}
+	}
+}
+
+.half-fluid {
+
+	.left-half,
+	.right-half {
+		left: 50%;
+		margin-left: -50vw;
+		max-width: 100vw;
+		position: relative;
+		right: 50%;
+		width: 100vw;
+		padding: 0 30px;
+	}
+
+	.image {
+		min-height: 400px;
+		height: 100%;
+	}
+}
+
+@media (min-width: 1024px) {
+	.half-fluid {
+		.left-half {
+			padding-left: 0 !important;
+			position: absolute;
+			left: 0;
+			right: 50%;
+			margin-left: auto;
+			width: auto;
+		}
+
+		.right-half {
+			padding-right: 0 !important;
+			position: absolute;
+			right: 0;
+			left: 50%;
+			margin-left: auto;
+			width: auto;
+		}
+	}
+}
+
+.hero-overlay {
+	@apply relative before:content-[''] before:absolute before:inset-0 before:bg-secondary before:opacity-60 before:w-full before:h-full before:top-0;
+}
+
+.youtube-container iframe {
+	height: 100%;
+	width: 100%;
+	aspect-ratio: 16/9;
+}
+
+.wysiwyg ul li {
+	@apply relative pl-10;
+}
+
+.wysiwyg ul li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	background-image: url('images/marker.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+.custom-border-top::after {
+	content: '';
+	@apply w-full absolute h-full -top-5 -left-5 border border-solid border-primary -z-10;
+	pointer-events: none;
+}
+
+.custom-border-iframe::after {
+	content: '';
+	@apply w-full absolute h-full top-5 left-5 border border-solid border-primary -z-10;
+	pointer-events: none;
+}
+
+.custom-border-bottom::after {
+	content: '';
+	@apply w-full absolute bottom-5 h-full -right-5 border border-solid border-primary -z-10;
+	pointer-events: none;
+}
+
+
+
+.custom-border-top-visible::after {
+	content: '';
+	@apply w-full absolute h-full -top-5 -left-5 border border-solid border-secondary -z-10;
+	pointer-events: none;
+}
+
+.map iframe {
+	@apply w-full grayscale hover:grayscale-0 xl:min-h-[610px];
+}

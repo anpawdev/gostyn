@@ -1,0 +1,91 @@
+.menu-item {
+  @apply xl:mx-5 2xl:mx-[39px] font-light hover:text-primary relative font-Lato p-5 xl:p-0 border-b border-b-primary xl:border-b-0;
+}
+
+.menu-item a {
+  @apply h-full w-full block text-primary xl:text-white;
+}
+
+.menu-item:hover a::before {
+  transform: scaleX(1);
+}
+
+.menu-item a::before {
+  @apply bg-primary absolute block w-[3px] xl:w-full left-0 h-full xl:h-[3px] xl:-bottom-[50px] top-0 xl:top-auto xl:transition-transform;
+  content: "";
+  transform: scaleX(0);
+}
+
+.current_page_item a::before {
+  @apply bg-primary absolute block w-[3px] xl:w-full left-0 h-full xl:h-[3px] xl:-bottom-[50px] top-0 xl:top-auto;
+  content: "";
+  transform: scaleX(1);
+  transition: transform 0.2s ease-out;
+}
+
+.current_page_item a {
+  @apply text-primary;
+}
+
+.nav-toggle {
+  @apply w-[50px] h-[50px] relative cursor-pointer;
+}
+
+.nav-toggle div {
+  @apply bg-primary;
+    height: 2px;
+    width: 40px;
+    left: 5px;
+    position: absolute;
+    top: 24px;
+    border-radius: 1px;
+    transition: transform 0.2s ease-out;
+}
+
+.nav-toggle div:nth-child(1) {
+  transform: translateY(-10px);
+}
+
+.nav-toggle div:nth-child(3) {
+  transform: translateY(10px);
+}
+
+.nav-content {
+  height: 100dvh;
+  @apply bg-white top-[121px] right-0 fixed w-[360px] flex flex-col overflow-auto max-w-full;
+  box-shadow: 0 5px 15px 0px rgba(15, 55, 168, 0.18);
+  transform: translateX(calc(100% + 15px));
+  transition: transform 0.2s ease-out;
+}
+
+nav.expanded .nav-content {
+  transform: translateX(0px);
+}
+
+nav.expanded {
+  @apply bg-white;
+}
+
+nav.expanded .nav-toggle div:nth-child(1) {
+  transform: translateX(0px) rotate(45deg);
+}
+
+.nav.expanded .nav-toggle div:nth-child(2) {
+  transform: scaleX(0);
+}
+
+.nav.expanded .nav-toggle div:nth-child(3) {
+  transform: translateX(0px) rotate(-45deg);
+}
+
+.sub-menu.visible {
+  @apply block;
+}
+
+/* .header--scroll  .menu-item a::before {
+  @apply !bg-secondary;
+} */
+
+.header--scroll  .current_page_item a::before {
+  @apply !bg-primary;
+}
