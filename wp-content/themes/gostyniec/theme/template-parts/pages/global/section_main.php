@@ -49,7 +49,7 @@
                                                             <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "w-max h-full object-cover"]); ?>
                                                         </a>
                                                     <?php else: ?>
-                                                        <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "splide__slide w-full h-full 2xl:min-h-[591px] object-cover"]); ?>
+                                                        <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "splide__slide w-full h-full max-h-[591px] sm:min-h-[591px] object-cover"]); ?>
                                                     <?php endif; ?>
                                                 <?php endwhile; ?>
                                             </ul>

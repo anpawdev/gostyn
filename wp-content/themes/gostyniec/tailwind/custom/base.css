@@ -29,8 +29,7 @@ html {
 
 article {
 	ul {
-		list-style: disc;
-		@apply mb-5 px-5;
+		@apply mb-5;
 	}
 
 	h1 {

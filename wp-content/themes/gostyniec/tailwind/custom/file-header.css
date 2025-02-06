@@ -4,7 +4,7 @@ Author: Anna Pawlik
 Description: This is a starter tailwind theme for gostyniec
 Version: 0.1.0
 Tested up to: 6.2
-Requires PHP: 8.0
+Requires PHP: 7.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: gftw
@@ -49,7 +49,11 @@ header a:hover svg .fill-color,
 }
 
 header.header--scroll #logo img {
-  @apply xl:scale-50 scale-[0.8];
+  @apply xl:scale-[0.4] scale-[0.8] py-4;
+}
+
+header.header--scroll .nav {
+  @apply xl:pb-[33px];
 }
 
 header.header--scroll .menu-item a {

@@ -73,7 +73,7 @@ $email = get_field('email_address', 'options');
 				?>
 			</nav>
 
-			<div class="relative w-full h-full xl:pt-[124px] max-w-[175px] max-h-[231px]" data-aos="zoom-in">
+			<div class="relative w-full h-full xl:pt-[124px] max-w-[175px] max-h-[231px] 2xl:min-w-[95px]" data-aos="zoom-in">
 				<a aria-label="gostyniec" href="<?php echo bloginfo('url'); ?>" id="logo" class="w-full xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2">
 					<?php
 					$logo = get_field('logo', 'options');

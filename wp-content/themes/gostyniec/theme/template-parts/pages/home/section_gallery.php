@@ -14,18 +14,9 @@ $gallery_group = get_field('gallery');
     </div>
   </div>
   <div class="container-fluid relative">
-    <svg class="absolute hidden 2xl:block -top-5 left-[calc(50%-492px)]" width="75" height="77" viewBox="0 0 75 77" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <rect width="75" height="77" fill="url(#pattern0_1979_47)" />
-      <defs>
-        <pattern id="pattern0_1979_47" patternContentUnits="objectBoundingBox" width="1" height="1">
-          <use xlink:href="#image0_1979_47" transform="scale(0.0133333 0.012987)" />
-        </pattern>
-        <image id="image0_1979_47" width="75" height="77" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABNAgMAAACTeXFkAAAACVBMVEUAAAAjTFv///+D6oWhAAAAA3RSTlMA//9EUNYhAAAAJklEQVR4nGNYtWoVAyZgGmFijKGoIAQkhk3dqNio2KjYqNhwEgMAc+wHpv2pKuwAAAAASUVORK5CYII=" />
-      </defs>
-    </svg>
     <?php if (have_rows('gallery_repeater')): ?>
       <div id="splide-gallery" class="splide">
-        <div class="splide__track">
+        <div class="splide__track py-4">
           <ul class="splide__list">
             <?php while (have_rows('gallery_repeater')) : the_row();
               $imageSlider = get_sub_field('gallery_repeater_image'); ?>
@@ -42,16 +33,6 @@ $gallery_group = get_field('gallery');
         </div>
       </div>
     <?php endif; ?>
-    <svg class="absolute hidden 2xl:block -bottom-5 right-[calc(50%-490px)]" width="75" height="77" viewBox="0 0 75 77" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <rect width="75" height="77" fill="url(#pattern0_1979_48)" />
-      <defs>
-        <pattern id="pattern0_1979_48" patternContentUnits="objectBoundingBox" width="1" height="1">
-          <use xlink:href="#image0_1979_48" transform="scale(0.0133333 0.012987)" />
-        </pattern>
-        <image id="image0_1979_48" width="75" height="77" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABNAgMAAACTeXFkAAAACVBMVEUAAAAjTFv///+D6oWhAAAAA3RSTlMA//9EUNYhAAAAJElEQVR4nGNAA4zoAqNio2KjYqNiw0EsFA1gUcc00sRWrVoBAJfAB6bF4VbpAAAAAElFTkSuQmCC" />
-      </defs>
-    </svg>
-
   </div>
   <div class="container">
     <div class="row text-center mt-[38px]">
