@@ -59,3 +59,7 @@ header.header--scroll .menu-item a {
 /* header.header--scroll .menu-item a:hover {
   @apply !text-secondary;
 } */
+
+.home h1 {
+  @apply xl:text-[3.9375rem];
+}

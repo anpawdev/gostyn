@@ -3,7 +3,7 @@ $program_group = get_field('program_group');
 ?>
 
 <?php if ($program_group): ?>
-    <section class="mb-10">
+    <section class="mb-10 sm:mb-[75px]">
         <div class="container">
             <div class="row">
                 <div class="flex flex-wrap lg:flex-nowrap justify-center">

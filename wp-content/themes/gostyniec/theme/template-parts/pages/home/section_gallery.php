@@ -2,11 +2,11 @@
 $gallery_group = get_field('gallery');
 ?>
 
-<section>
+<section class="mb-8 sm:mb-14">
   <div class="container">
     <div class="row">
-      <div class="wysiwyg text-center lg:w-1/2 lg:mx-auto">
-        <h2 class="text-secondary uppercase text-[24px] xl:text-[35px] mb-[20px]">
+      <div class="wysiwyg text-center lg:w-1/2 lg:mx-auto mb-[60px]">
+        <h2 class="text-secondary uppercase text-[28px] xl:text-[35px] mb-[20px] lg:mb-[50px]">
           <?php echo $gallery_group['gallery_heading']; ?>
         </h2>
         <?php echo $gallery_group['gallery_text']; ?>
@@ -14,7 +14,7 @@ $gallery_group = get_field('gallery');
     </div>
   </div>
   <div class="container-fluid relative">
-    <svg class="absolute hidden 2xl:block -top-5 left-[calc(50%-431px)]" width="75" height="77" viewBox="0 0 75 77" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg class="absolute hidden 2xl:block -top-5 left-[calc(50%-492px)]" width="75" height="77" viewBox="0 0 75 77" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <rect width="75" height="77" fill="url(#pattern0_1979_47)" />
       <defs>
         <pattern id="pattern0_1979_47" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -42,7 +42,7 @@ $gallery_group = get_field('gallery');
         </div>
       </div>
     <?php endif; ?>
-    <svg class="absolute hidden 2xl:block -bottom-5 right-[calc(50%-431px)]" width="75" height="77" viewBox="0 0 75 77" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg class="absolute hidden 2xl:block -bottom-5 right-[calc(50%-490px)]" width="75" height="77" viewBox="0 0 75 77" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <rect width="75" height="77" fill="url(#pattern0_1979_48)" />
       <defs>
         <pattern id="pattern0_1979_48" patternContentUnits="objectBoundingBox" width="1" height="1">

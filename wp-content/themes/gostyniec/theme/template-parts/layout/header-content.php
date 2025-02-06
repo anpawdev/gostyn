@@ -12,12 +12,12 @@ $phone = get_field('phone_number', 'options');
 $email = get_field('email_address', 'options');
 ?>
 
-<header class="top-0 left-0 w-full fixed z-50 transition-all duration-300 xl:pt-[47px] <?php echo is_404() ? 'bg-primary' : ''; ?>">
-	<nav class="nav px-6 xl:mx-[53px] 2xl:px-[70px] flex items-center pb-5 xl:pb-[50px] max-w-[100vw] h-full border-b border-solid border-b-white">
+<header class="top-0 left-0 w-full fixed z-50 transition-all duration-300 xl:pt-[30px] <?php echo is_404() ? 'bg-primary' : ''; ?>">
+	<nav class="nav px-6 xl:mx-[53px] 2xl:px-[34px] flex items-center pb-5 xl:pb-[50px] max-w-[100vw] h-full border-b border-solid border-b-white">
 		<div class="nav-wrapper flex justify-between items-center xl:items-start w-full xl:pt-[53px]">
 
 			<nav class="xl:flex flex-col gap-[116px] hidden" aria-label="<?php esc_attr_e('Menu główne', 'gostyniec'); ?>">
-				<div class="flex items-center text-white js-hide-scroll gap-[30px]">
+				<div class="flex items-center text-white js-hide-scroll gap-10">
 					<?php if (!empty($phone)): ?>
 						<a href="tel:<?= filter_var($phone, FILTER_SANITIZE_NUMBER_INT); ?>" class="flex items-center hover:text-primary">
 							<svg class="mr-[30px]" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
@@ -73,8 +73,8 @@ $email = get_field('email_address', 'options');
 				?>
 			</nav>
 
-			<div class="relative w-full h-full xl:pt-[124px] xl:min-w-[200px]" data-aos="zoom-in">
-				<a aria-label="gostyniec" href="<?php echo bloginfo('url'); ?>" id="logo" class="xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2">
+			<div class="relative w-full h-full xl:pt-[124px] max-w-[175px] max-h-[231px]" data-aos="zoom-in">
+				<a aria-label="gostyniec" href="<?php echo bloginfo('url'); ?>" id="logo" class="w-full xl:absolute xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2">
 					<?php
 					$logo = get_field('logo', 'options');
 
@@ -100,13 +100,13 @@ $email = get_field('email_address', 'options');
 						$link_target = $link['target'] ? $link['target'] : '_self';
 					?>
 						<a
-							class="text-white hover:bg-primary hover:border-transparent h-[42px] px-[52px] font-light text-[15px] transition-all inline-flex justify-center items-center border border-solid border-white"
+							class="text-white hover:bg-primary hover:border-transparent uppercase h-[42px] px-[52px] font-light text-[15px] transition-all inline-flex justify-center items-center border border-solid border-white"
 							href="<?php echo esc_url($link_url); ?>"
 							target="<?php echo esc_attr($link_target); ?>">
 							<?php echo esc_html($link_title); ?>
 						</a>
 					<?php endif; ?>
-					<div class="flex items-center gap-[38px]">
+					<div class="flex items-center gap-[31px]">
 						<?php
 						$social_media = get_field('social_media', 'options');
 						if ($social_media && isset($social_media['facebook'])): ?>

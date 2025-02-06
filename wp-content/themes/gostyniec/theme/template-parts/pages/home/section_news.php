@@ -6,7 +6,7 @@ $post_group = get_field('home_posts');
   <div class="container">
     <div class="row">
       <div class="wysiwyg text-center lg:w-1/2 lg:mx-auto">
-        <h2 class="text-secondary uppercase text-[24px] xl:text-[35px] mb-[20px]">
+        <h2 class="text-secondary uppercase text-[28px] xl:text-[35px] mb-[20px] sm:mb-[42px]">
           <?php echo $post_group['posts_heading']; ?>
         </h2>
         <?php echo $post_group['posts_text']; ?>
@@ -24,10 +24,10 @@ $post_group = get_field('home_posts');
       $query = new WP_Query($args);
 
       if ($query->have_posts()): ?>
-        <div class="md:grid-cols-2 grid md:gap-x-14 2xl:gap-x-[110px] xl:gap-y-10">
+        <div class="md:grid-cols-2 grid md:gap-x-14 2xl:gap-x-[110px]">
 
           <?php while ($query->have_posts()): $query->the_post(); ?>
-            <div class="flex flex-col h-full mt-20 xl:mt-[84px]" data-aos="fade-up">
+            <div class="flex flex-col h-full mt-20 xl:mt-[44px]" data-aos="fade-up">
               <a href="<?php echo get_permalink(); ?>" class="relative group text-secondary transition-all h-full">
                 <div class="relative">
                   <div class="custom-border-top-visible">
@@ -35,7 +35,7 @@ $post_group = get_field('home_posts');
                   </div>
                 </div>
                 <div class="px-4 xl:px-[60px]">
-                  <h3 class="text-secondary group-hover:text-primary text-[20px] font-bold pt-6 xl:pt-[70px] mb-[34px]"><?php the_title(); ?></h3>
+                  <h3 class="text-secondary group-hover:text-primary text-[20px] font-bold pt-6 xl:pt-[62px] mb-[20px]"><?php the_title(); ?></h3>
                   <p class="text-[17px] leading-[22px] group-hover:text-primary"><?php echo wp_trim_words(get_the_content(), 20, '...');  ?></p>
                 </div>
               </a>
@@ -58,7 +58,7 @@ $post_group = get_field('home_posts');
           $link_target = $link['target'] ? $link['target'] : '_self';
         ?>
           <a
-            class="text-white hover:bg-secondary mx-auto bg-primary h-[61px] sm:px-[45px] w-full sm:w-auto px-4 uppercase font-Lato font-light text-base lg:text-[18px] transition-all inline-flex justify-center items-center mt-[56px]"
+            class="text-white hover:bg-secondary mx-auto bg-primary h-[61px] w-full sm:w-auto px-4 uppercase font-Lato font-light text-base lg:text-[18px] transition-all inline-flex justify-center items-center mt-[52px]"
             href="<?php echo esc_url($link_url); ?>"
             target="<?php echo esc_attr($link_target); ?>">
             <?php echo esc_html($link_title); ?>

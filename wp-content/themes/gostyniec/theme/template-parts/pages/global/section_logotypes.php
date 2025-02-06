@@ -1,10 +1,10 @@
-<section class="overflow-hidden py-[58px] sm:pt-[48px] sm:pb-[82px] text-center">
+<section class="overflow-hidden pt-[48px] pb-[29px] text-center">
   <div class="container">
     <div class="row">
       <h2 class="text-text inline-block bg-white mx-auto relative px-10 uppercase top-6 z-10 text-center font-light text-[24px] md:text-[35px]"><?php echo get_field('logotypes_heading', 'options'); ?></h2>
       <?php
       if (have_rows('logotypes', 'options')): ?>
-        <div id="splide-logo" class="splide sm:px-[75px] py-[95px] border border-solid border-primary">
+        <div id="splide-logo" class="splide sm:px-[75px] py-[80px] border border-solid border-primary">
           <div class="splide__track">
             <ul class="splide__list items-center">
               <?php while (have_rows('logotypes', 'options')) : the_row(); ?>

@@ -1,11 +1,11 @@
-<section class="pb-[150px]" id="opinie">
+<section class="pb-[100px]" id="opinie">
     <div class="container">
         <div class="row">
             <h2 class="text-text uppercase text-center font-light text-[24px] md:text-[35px]"><?php echo get_field('testimonials_heading', 'options'); ?></h2>
-            <div class=" mt-[70px]">
+            <div class=" mt-3.5">
                 <?php echo do_shortcode(get_field('shortcode', 'options')); ?>
             </div>
-            <div class="text-center mt-[70px]">
+            <div class="text-center mt-[38px]">
                 <?php
                 $link = get_field('testimonials_link', 'options');
                 if ($link):
@@ -14,7 +14,7 @@
                     $link_target = $link['target'] ? $link['target'] : '_self';
                 ?>
                     <a
-                        class="inline-flex items-center uppercase font-light"
+                        class="inline-flex items-center uppercase font-light hover:text-primary transition-all"
                         href="<?php echo esc_url($link_url); ?>"
                         target="<?php echo esc_attr($link_target); ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="mr-1">

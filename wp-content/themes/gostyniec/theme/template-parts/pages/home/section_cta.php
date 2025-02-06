@@ -4,10 +4,10 @@ $cta_group = get_field('offer_group');
 $background = $cta_group['offer_background'];
 ?>
 
-<section class="hero hero-overlay relative flex justify-center items-center mt-20 lg:mt-0 pt-32 md:pt-[195px] pb-24 md:pb-[248px] mb-[62px]" style="background: url(<?php echo esc_url($background); ?>) no-repeat; background-size:cover;">
+<section class="hero hero-overlay relative flex justify-center items-center mt-20 lg:mt-0 pt-32 lg:pt-[190px] pb-24 lg:pb-[248px] mb-[58px]" style="background: url(<?php echo esc_url($background); ?>) no-repeat; background-size:cover;">
     <div class="container">
         <div data-aos="fade-up" class="text-white mx-auto xl:w-8/12 relative">
-            <svg class="absolute sm:-left-10 -left-3.5 -top-3.5 sm:-top-10" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg class="absolute lg:-left-14 -left-3.5 -top-3.5 lg:-top-14" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <mask id="mask0_1979_199" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="65">
                     <rect width="64" height="64" transform="translate(0 0.000244141)" fill="url(#pattern0_1979_199)" />
                 </mask>
@@ -22,12 +22,12 @@ $background = $cta_group['offer_background'];
                 </defs>
             </svg>
 
-            <h2 class="text-[28px] md:text-[40px] md:leading-[40px] uppercase sm:w-3/4 lg:w-1/2"><?php echo $cta_group['offer_title']; ?></h2>
-            <div class="flex items-center flex-wrap md:flex-nowrap mt-10 md:mt-[104px]">
-                <div class="text-[17px] leading-[22px] md:border-r md:border-solid md:border-r-white md:pr-[90px] xl:w-[70%]">
+            <h2 class="text-[28px] lg:text-[40px] lg:leading-[40px] uppercase sm:w-3/4 lg:w-1/2"><?php echo $cta_group['offer_title']; ?></h2>
+            <div class="flex items-center flex-wrap lg:flex-nowrap mt-10 lg:mt-[104px]">
+                <div class="text-[17px] leading-[22px] lg:border-r lg:border-solid lg:border-r-white lg:pr-[90px] lg:w-[62%]">
                     <?php echo $cta_group['offer_text']; ?>
                 </div>
-                <div class="md:pl-[66px] w-full sm:w-auto">
+                <div class="lg:pl-[66px] w-full sm:w-auto">
                     <?php
                     $link = $cta_group['offer_button'];
                     if ($link):
@@ -36,7 +36,7 @@ $background = $cta_group['offer_background'];
                         $link_target = $link['target'] ? $link['target'] : '_self';
                     ?>
                         <a
-                            class="text-white hover:bg-white mt-14 md:mt-0 hover:text-secondary hover:border-transparent h-[61px] lg:h-[69px] lg:px-[52px] font-light px-10 text-[17px] lg:text-[18px] w-full sm:w-auto transition-all inline-flex justify-center items-center border border-solid border-white uppercase"
+                            class="text-white hover:bg-white mt-14 lg:mt-0 hover:text-secondary hover:border-transparent h-[61px] lg:px-[40px] font-light px-10 text-[17px] lg:text-[18px] w-full sm:w-auto transition-all inline-flex justify-center items-center border border-solid border-white uppercase"
                             href="<?php echo esc_url($link_url); ?>"
                             target="<?php echo esc_attr($link_target); ?>">
                             <?php echo esc_html($link_title); ?>
@@ -45,7 +45,7 @@ $background = $cta_group['offer_background'];
                 </div>
 
             </div>
-            <svg class="absolute -bottom-3.5 -right-3.5 sm:-bottom-7 sm:-right-7" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg class="absolute -bottom-3.5 -right-3.5 lg:-bottom-14 lg:-right-10" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <mask id="mask0_1979_202" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
                     <rect width="64" height="64" fill="url(#pattern0_1979_202)" />
                 </mask>

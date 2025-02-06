@@ -49,7 +49,7 @@
                                                             <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "w-max h-full object-cover"]); ?>
                                                         </a>
                                                     <?php else: ?>
-                                                        <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "splide__slide w-max h-full 2xl:min-h-[514px] object-cover"]); ?>
+                                                        <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "splide__slide w-full h-full 2xl:min-h-[591px] object-cover"]); ?>
                                                     <?php endif; ?>
                                                 <?php endwhile; ?>
                                             </ul>
@@ -77,13 +77,13 @@
 
                         <div class="wysiwyg lg:w-1/2 pt-2.5 order-first lg:order-1 mb-8 lg:mb-0 <?php echo $text_position; ?>" data-aos="<?php echo $data_aos; ?>">
                             <?php if (get_sub_field('title')): ?>
-                                <h2 class="text-secondary uppercase text-[24px] xl:text-[35px] mb-[20px]">
+                                <h2 class="text-secondary uppercase text-[24px] xl:text-[35px] mb-[20px] lg:mb-[40px]">
                                     <?php echo get_sub_field('title'); ?>
                                 </h2>
                             <?php endif; ?>
 
                             <?php echo get_sub_field('text'); ?>
-                            <div class="flex flex-wrap sm:flex-nowrap gap-2 mt-6 sm:mt-10 buttons">
+                            <div class="flex flex-wrap sm:flex-nowrap gap-2 mt-6 sm:mt-14 buttons">
 
                                 <?php
                                 $link = get_sub_field('button_second');
@@ -92,7 +92,7 @@
                                     $link_title = $link['title'];
                                     $link_target = $link['target'] ? $link['target'] : '_self';
                                 ?>
-                                    <a class="button text-white uppercase text-base 2xl:text-[18px] h-[61px] hover:bg-primary bg-secondary transition-all font-light inline-flex justify-center items-center w-full sm:w-auto px-9 2xl:px-[54px]"
+                                    <a class="button text-white uppercase text-base 2xl:text-[18px] h-[61px] hover:bg-primary bg-secondary transition-all font-light inline-flex justify-center items-center w-full sm:w-auto px-9 2xl:px-[41px]"
                                         href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
                                         <?php echo esc_html($link_title); ?>
                                     </a>
@@ -106,12 +106,12 @@
                                     $link_target = $link['target'] ? $link['target'] : '_self';
                                 ?>
                                     <?php if (is_page('galeria')): ?>
-                                        <a class="hidden button text-white uppercase text-base 2xl:text-[18px] h-[61px] hover:bg-secondary bg-primary transition-all font-light lg:inline-flex justify-center items-center w-full sm:w-auto px-9 2xl:px-[54px]"
+                                        <a class="hidden button text-white uppercase text-base 2xl:text-[18px] h-[61px] hover:bg-secondary bg-primary transition-all font-light lg:inline-flex justify-center items-center w-full sm:w-auto px-9 2xl:px-[41px]"
                                             href="javascript:void(0);" data-fancybox-trigger="gallery-<?php echo get_row_index(); ?>">
                                             <?php echo esc_html($link_title); ?>
                                         </a>
                                     <?php else: ?>
-                                        <a class="button text-white uppercase text-base 2xl:text-[18px] h-[61px] hover:bg-secondary bg-primary transition-all font-light inline-flex justify-center items-center w-full sm:w-auto px-9 2xl:px-[54px]"
+                                        <a class="button text-white uppercase text-base 2xl:text-[18px] h-[61px] hover:bg-secondary bg-primary transition-all font-light inline-flex justify-center items-center w-full sm:w-auto px-9 2xl:px-[41px]"
                                             href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
                                             <?php echo esc_html($link_title); ?>
                                         </a> <?php endif; ?>

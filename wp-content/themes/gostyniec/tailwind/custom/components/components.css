@@ -94,6 +94,10 @@ section {
 	@apply font-bold;
 }
 
+.home .wysiwyg em {
+	@apply lg:text-[20px];
+}
+
 .copyright p {
   @apply flex items-baseline flex-wrap justify-center;
 }

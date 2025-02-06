@@ -1,5 +1,5 @@
 .menu-item {
-  @apply xl:mx-5 2xl:mx-[39px] font-light hover:text-primary relative font-Lato p-5 xl:p-0 border-b border-b-primary xl:border-b-0;
+  @apply xl:mx-5 2xl:mx-[50px] font-light hover:text-primary relative font-Lato p-5 xl:p-0 border-b border-b-primary xl:border-b-0;
 }
 
 .menu-item a {
