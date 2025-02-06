@@ -28,6 +28,8 @@ if (logoSlider !== null) {
       640: {
         gap: '1.5rem',
         perPage: 1,
+        autoplay: true,
+        speed: 400,
       },
     }
   })

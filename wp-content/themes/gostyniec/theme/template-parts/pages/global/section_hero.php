@@ -3,12 +3,12 @@
 if (is_single()) {
 	$background = get_the_post_thumbnail_url(get_the_ID(), 'full');
 	$banner_text = get_the_title();
-} elseif (!is_home()) {
+} elseif (!is_home() && !is_404()) {
 	$background = get_field('banner_background');
 	$banner_text = get_field('banner_text');
 } else {
-	$background = get_field('banner_background', 41);
-	$banner_text = get_field('banner_text', 41);
+	$background = get_field('banner_background', 76);
+	$banner_text = get_field('banner_text', 76);
 }
 
 $heightClass = is_front_page() ? 'xl:h-screen' : 'xl:h-[752px]';
@@ -16,7 +16,7 @@ $heightClass = is_front_page() ? 'xl:h-screen' : 'xl:h-[752px]';
 
 <section class="hero hero-overlay <?php echo $heightClass; ?> h-[460px] relative flex justify-center items-center" style="background: url(<?php echo esc_url($background); ?>) no-repeat; background-size:cover;">
 	<div class="container">
-		<div data-aos="fade-in" class="text-white uppercase text-[28px] md:text-[36px] text-center <?php if(is_front_page()):?> 2xl:mt-[380px] <?php else:?> xl:mt-[190px] <?php endif;?> <?php if (is_single()): ?> xl:w-1/2 mx-auto <?php endif; ?>">
+		<div data-aos="fade-in" class="text-white uppercase text-[28px] md:text-[36px] text-center mt-14 <?php if(is_front_page()):?> 2xl:mt-[380px] <?php else:?> xl:mt-[190px] <?php endif;?> <?php if (is_single()): ?> xl:w-1/2 mx-auto <?php endif; ?>">
 			<?php echo $banner_text; ?>
 			<?php
 			$link = get_field('banner_button');

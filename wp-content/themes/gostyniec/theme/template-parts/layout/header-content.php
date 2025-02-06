@@ -12,8 +12,8 @@ $phone = get_field('phone_number', 'options');
 $email = get_field('email_address', 'options');
 ?>
 
-<header class="top-0 left-0 w-full fixed z-50 transition-all duration-300 xl:pt-[30px] <?php echo is_404() ? 'bg-primary' : ''; ?>">
-	<nav class="nav px-6 xl:mx-[53px] 2xl:px-[34px] flex items-center pb-5 xl:pb-[50px] max-w-[100vw] h-full border-b border-solid border-b-white">
+<header class="top-0 left-0 w-full fixed z-50 transition-all duration-300 xl:pt-[30px]">
+	<nav class="nav px-6 xl:mx-[53px] 2xl:px-[34px] flex items-center pt-5 lg:pt-0 pb-5 xl:pb-[50px] max-w-[100vw] h-full border-b border-solid border-b-white">
 		<div class="nav-wrapper flex justify-between items-center xl:items-start w-full xl:pt-[53px]">
 
 			<nav class="xl:flex flex-col gap-[116px] hidden" aria-label="<?php esc_attr_e('Menu główne', 'gostyniec'); ?>">
@@ -81,7 +81,7 @@ $email = get_field('email_address', 'options');
 					$size = 'full';
 					if ($logo) {
 						$attr = array(
-							'class' => 'w-[100px] h-[100px] xl:w-full xl:h-full object-contain',
+							'class' => 'w-[100px] h-[80px] xl:w-full xl:h-full object-contain',
 							'loading' => 'lazy'
 						);
 						echo wp_get_attachment_image($logo, $size, false, $attr);
