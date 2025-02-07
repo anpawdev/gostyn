@@ -52,7 +52,7 @@
 
 .nav-content {
   height: 100dvh;
-  @apply bg-white top-[121px] right-0 fixed w-[360px] flex flex-col overflow-auto max-w-full;
+  @apply bg-white top-[77px] right-0 fixed w-[360px] flex flex-col overflow-auto max-w-full;
   box-shadow: 0 5px 15px 0px rgba(15, 55, 168, 0.18);
   transform: translateX(calc(100% + 15px));
   transition: transform 0.2s ease-out;
@@ -81,10 +81,6 @@ nav.expanded .nav-toggle div:nth-child(1) {
 .sub-menu.visible {
   @apply block;
 }
-
-/* .header--scroll  .menu-item a::before {
-  @apply !bg-secondary;
-} */
 
 .header--scroll  .current_page_item a::before {
   @apply !bg-primary;

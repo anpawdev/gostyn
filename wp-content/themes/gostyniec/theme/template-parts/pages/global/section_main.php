@@ -18,7 +18,7 @@
                     $border_position = ($row_index % 2 === 0) ? 'custom-border-bottom' : 'custom-border-top';
             ?>
 
-                    <div class="row mb-14 lg:mb-[141px] last:mb-0 xl:min-h-[609px] flex flex-col" >
+                    <div class="row mb-14 lg:mb-[141px] last:mb-0 md:min-h-[609px] flex flex-col" >
 
                         <div class="lg:w-1/2 lg:absolute <?php echo $image_position; ?>">
                             <?php if ($media_type == 'film YouTube'): ?>
@@ -46,7 +46,7 @@
                                                         <a class="splide__slide"
                                                             data-fancybox="gallery-<?php echo $row_index; ?>"
                                                             data-src="<?php echo wp_get_attachment_url($imageSlider); ?>">
-                                                            <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "w-max h-full object-cover"]); ?>
+                                                            <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "w-full h-full max-h-[591px] sm:min-h-[591px] object-cover"]); ?>
                                                         </a>
                                                     <?php else: ?>
                                                         <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "splide__slide w-full h-full max-h-[591px] sm:min-h-[591px] object-cover"]); ?>

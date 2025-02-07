@@ -31,7 +31,7 @@ $post_group = get_field('home_posts');
               <a href="<?php echo get_permalink(); ?>" class="relative group text-secondary transition-all h-full">
                 <div class="relative">
                   <div class="custom-border-top-visible">
-                    <?php the_post_thumbnail('full', ['class' => 'w-full min-h-[320px] xl:h-[469px] object-cover']); ?>
+                    <?php the_post_thumbnail('full', ['class' => 'w-full min-h-[320px] sm:h-[469px] object-cover']); ?>
                   </div>
                 </div>
                 <div class="px-4 xl:px-[60px]">

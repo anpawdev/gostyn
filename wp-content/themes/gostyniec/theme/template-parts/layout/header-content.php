@@ -13,7 +13,7 @@ $email = get_field('email_address', 'options');
 ?>
 
 <header class="top-0 left-0 w-full fixed z-50 transition-all duration-300 xl:pt-[30px]">
-	<nav class="nav px-6 xl:mx-[53px] 2xl:px-[34px] flex items-center pt-5 lg:pt-0 pb-5 xl:pb-[50px] max-w-[100vw] h-full border-b border-solid border-b-white">
+	<nav class="nav px-6 xl:mx-[53px] 2xl:px-[34px] flex items-center pt-2 lg:pt-0 pb-2 xl:pb-[50px] max-w-[100vw] h-full border-b border-solid border-b-white/75">
 		<div class="nav-wrapper flex justify-between items-center xl:items-start w-full xl:pt-[53px]">
 
 			<nav class="xl:flex flex-col gap-[116px] hidden" aria-label="<?php esc_attr_e('Menu główne', 'gostyniec'); ?>">
@@ -81,7 +81,7 @@ $email = get_field('email_address', 'options');
 					$size = 'full';
 					if ($logo) {
 						$attr = array(
-							'class' => 'w-[100px] h-[80px] xl:w-full xl:h-full object-contain',
+							'class' => 'w-[70px] h-[60px] xl:w-full xl:h-full object-contain',
 							'loading' => 'lazy'
 						);
 						echo wp_get_attachment_image($logo, $size, false, $attr);
@@ -204,7 +204,7 @@ $email = get_field('email_address', 'options');
 					$link_target = $link['target'] ? $link['target'] : '_self';
 				?>
 					<a
-						class="text-white bg-primary hover:border-transparent h-[62px] px-[52px] font-light text-[15px] transition-all inline-flex justify-center items-center w-full sm:w-auto sm:max-w-[225px]"
+						class="text-white bg-primary hover:border-transparent h-[62px] w-fullpx-[52px] font-light text-[15px] transition-all inline-flex justify-center items-center w-full"
 						href="<?php echo esc_url($link_url); ?>"
 						target="<?php echo esc_attr($link_target); ?>">
 						<?php echo esc_html($link_title); ?>

@@ -21,11 +21,11 @@ Underscores and Varia are distributed under the terms of the GNU GPL v2 or later
 */
 
 .header--scroll {
-  @apply !bg-white !h-[122px];
+  @apply !bg-white h-[77px] xl:!h-[122px];
 }
 
 .header--scroll .nav-content {
-  @apply top-[122px];
+  @apply top-[77px];
 }
 
 header nav ul li a {
@@ -49,7 +49,7 @@ header a:hover svg .fill-color,
 }
 
 header.header--scroll #logo img {
-  @apply xl:scale-[0.4] scale-[0.8] py-4;
+  @apply xl:scale-[0.4] xl:py-4;
 }
 
 header.header--scroll .nav {
@@ -59,10 +59,6 @@ header.header--scroll .nav {
 header.header--scroll .menu-item a {
   @apply !text-primary;
 }
-
-/* header.header--scroll .menu-item a:hover {
-  @apply !text-secondary;
-} */
 
 .home h1 {
   @apply xl:text-[3.9375rem];
