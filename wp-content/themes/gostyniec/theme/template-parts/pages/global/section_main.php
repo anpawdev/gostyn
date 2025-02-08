@@ -46,10 +46,10 @@
                                                         <a class="splide__slide"
                                                             data-fancybox="gallery-<?php echo $row_index; ?>"
                                                             data-src="<?php echo wp_get_attachment_url($imageSlider); ?>">
-                                                            <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "w-full h-full max-h-[591px] sm:min-h-[591px] object-cover"]); ?>
+                                                            <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "cursor-pointer w-full h-full max-h-[591px] sm:min-h-[591px] object-cover"]); ?>
                                                         </a>
                                                     <?php else: ?>
-                                                        <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "splide__slide w-full h-full max-h-[591px] sm:min-h-[591px] object-cover"]); ?>
+                                                        <?php echo wp_get_attachment_image($imageSlider, 'full', '', ["class" => "cursor-pointer splide__slide w-full h-full max-h-[591px] sm:min-h-[591px] object-cover"]); ?>
                                                     <?php endif; ?>
                                                 <?php endwhile; ?>
                                             </ul>

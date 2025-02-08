@@ -17,19 +17,19 @@ $youtube = get_field('banner_youtube_video');
 $videoFile = get_field('banner_video_file');
 ?>
 
-<section class="hero hero-overlay <?php echo $heightClass; ?> h-[460px] relative flex justify-center items-center overflow-hidden" style="background: url(<?php echo esc_url($background); ?>) no-repeat; background-size:cover;">
+<section class="hero <?php echo $heightClass; ?> h-[460px] relative flex justify-center items-center overflow-hidden" style="background: url(<?php echo esc_url($background); ?>) no-repeat; background-size:cover;">
 	<?php if ($media == 'film YouTube'): ?>
-		<div class="absolute top-0 left-0 w-full h-full z-[-1]">
+		<div class="absolute top-0 left-0 w-full h-full z-[2] hero-overlay">
 			<iframe class="w-full h-full absolute top-0 left-0" data-cookieyes="accept"
 				src="https://www.youtube-nocookie.com/embed/<?php echo $youtube; ?>?playlist=<?php echo $youtube; ?>&loop=1&autoplay=1&mute=1&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1"
 				title="YouTube video player" allowfullscreen></iframe>
 		</div>
 	<?php elseif ($media == 'film wideo'): ?>
-		<video class="absolute top-0 left-0 w-full h-full object-cover z-[-1]" autoplay loop muted playsinline>
+		<video class="absolute top-0 left-0 w-full h-full object-cover z-[2] hero-overlay" autoplay loop muted playsinline>
 			<source src="<?php echo esc_url($videoFile); ?>" type="video/mp4">
 		</video>
 	<?php else: ?>
-		<div class="absolute top-0 left-0 w-full h-full bg-cover bg-center z-[-1]">
+		<div class="absolute top-0 left-0 w-full h-full bg-cover bg-center z-[2] hero-overlay ">
 		<?php if (have_rows('banner_gallery_images')): ?>
 			<div class="gallery-slider splide h-full <?php echo $heightClass; ?>">
 				<div class="splide__track h-full">
@@ -45,7 +45,7 @@ $videoFile = get_field('banner_video_file');
 		</div>
 	<?php endif; ?>
 
-	<div class="container relative z-10">
+	<div class="container relative z-10 lg:w-1/2 mx-10 sm:mx-auto">
 		<div data-aos="fade-in" class="text-white uppercase text-[28px] md:text-[36px] text-center mt-14 
 			<?php if (is_front_page()): ?> 2xl:mt-[380px] <?php else: ?> xl:mt-[190px] <?php endif; ?> 
 			<?php if (is_single()): ?> xl:w-1/2 mx-auto <?php endif; ?>">

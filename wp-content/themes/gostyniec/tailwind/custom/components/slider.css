@@ -23,6 +23,18 @@
 @apply xl:!right-[6rem] z-[99];
 }
 
+.gallery-slider .splide__arrow--prev {
+  @apply xl:!left-[4rem] z-[99];
+}
+
+.gallery-slider .splide__arrow--next {
+@apply xl:!right-[4rem] z-[99];
+}
+
+.gallery-slider .splide__arrow svg {
+  fill: rgba(255,255,255,0.8) !important;
+}
+
 .ti-prev {
   @apply xl:!-left-8;
 }
@@ -88,11 +100,14 @@
 .splide .custom-arrows,
 .ti-prev,
 .ti-next {
-  @apply !opacity-0;
+  @apply opacity-0;
   transition: opacity 0.3s ease;
 }
 
+.hero:hover .custom-arrows,
 .splide:hover .custom-arrows,
+.gallery-slider:hover .custom-arrows,
+.bg-cover:hover .custom-arrows,
 .ti-widget:hover .ti-prev,
 .ti-widget:hover .ti-next {
   @apply !opacity-100 z-[9999];

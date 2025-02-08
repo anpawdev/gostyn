@@ -120,7 +120,7 @@ article {
 }
 
 .hero-overlay {
-	@apply relative before:content-[''] before:absolute before:inset-0 before:bg-secondary before:opacity-60 before:w-full before:h-full before:top-0;
+	@apply before:z-[1] relative before:content-[''] before:absolute before:inset-0 before:bg-secondary before:opacity-60 before:w-full before:h-full before:top-0;
 }
 
 .youtube-container iframe {

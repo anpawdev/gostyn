@@ -79,7 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
         rewind: true, 
         perPage: 1,
         perMove: 1,
-        arrows: false,
+        arrows: true,
+        classes: {
+          arrows: 'splide__arrows custom-arrows',
+          arrow: 'splide__arrow custom-arrow',
+          prev: 'splide__arrow--prev arrow-prev',
+          next: 'splide__arrow--next arrow-next',
+        },
         speed: 300,
         autoplay: true
       });
